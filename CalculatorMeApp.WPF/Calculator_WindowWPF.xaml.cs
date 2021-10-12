@@ -121,7 +121,15 @@ namespace CalculatorMeApp.WPF
             {
                 Dispatcher.BeginInvoke(new Action(() => 
                 {
-                    this.DragMove();
+                    //Me
+                    try
+                    {
+                        this.DragMove();
+                    }
+                    catch
+                    {
+
+                    }
                 }));
             }
         }
