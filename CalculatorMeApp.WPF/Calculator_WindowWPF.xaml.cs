@@ -119,7 +119,8 @@ namespace CalculatorMeApp.WPF
         {
             if (e.LeftButton == MouseButtonState.Pressed)  //解决此报错：调度程序进程已挂起,但消息仍在处理中
             {
-                Dispatcher.BeginInvoke(new Action(() => {
+                Dispatcher.BeginInvoke(new Action(() => 
+                {
                     this.DragMove();
                 }));
             }

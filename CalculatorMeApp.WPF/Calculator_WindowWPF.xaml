@@ -389,7 +389,8 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <TextBox x:Name="Result" Grid.Row="0"  BorderBrush="{x:Null}" BorderThickness="0" IsReadOnly="True" FontSize="25" Margin="0 65 20 0" HorizontalAlignment="Right" Foreground="White" Background="Black"/>
-                                <TextBox x:Name="Input" Grid.Row="1"  BorderBrush="{x:Null}" BorderThickness="0" IsReadOnly="False" FontSize="75" Margin="0 0 20 0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Background="Black"/>
+                                <TextBox x:Name="Input" Grid.Row="1"  BorderBrush="{x:Null}" BorderThickness="0" 
+                                         IsReadOnly="True" FontSize="75" Margin="0 0 20 0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Background="Black"/>
                             </Grid>
                             <!--计算器计算区域-->
                             <Grid Grid.Row="1" Margin="20 40 20 15">
@@ -442,7 +443,8 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <TextBox x:Name="Result1" Grid.Row="0" BorderBrush="{x:Null}" BorderThickness="0" IsReadOnly="True" FontSize="25" Margin="0 65 20 0" HorizontalAlignment="Right" Foreground="White" Background="Black"/>
-                                <TextBox x:Name="Input1" Grid.Row="1"  BorderBrush="{x:Null}" BorderThickness="0" IsReadOnly="False" FontSize="75" Margin="0 0 20 10" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Background="Black"/>
+                                <TextBox x:Name="Input1" Grid.Row="1"  BorderBrush="{x:Null}" BorderThickness="0" 
+                                         IsReadOnly="True" FontSize="75" Margin="0 0 20 10" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Background="Black"/>
                             </Grid>
                             <!--计算器计算区域-->
                             <Grid Grid.Row="1" Margin="20 5 20 10">
