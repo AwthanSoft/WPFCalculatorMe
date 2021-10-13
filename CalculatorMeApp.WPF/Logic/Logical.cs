@@ -379,6 +379,19 @@ namespace Logic
             return false;
         }
 
+        /// <summary>
+        /// Check if string is OPerator
+        /// </summary>
+        /// <param name="value">the string for check</param>
+        /// <returns>true: if it operator</returns>
+        /// Me
+        public bool isOperator(string value)
+        {
+            return IsOperator(value);
+        }
+
+
+
         //判断元素是否为数字
         private bool isNumberic(string value)
         {

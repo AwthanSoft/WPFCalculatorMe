@@ -339,7 +339,21 @@ namespace CalculatorMeApp.WPF
             if (num != "")
                 arrayList.Add(num);
             Logical logical = new Logical();
+
+            //Me
+            //check if last input isn't operator before processing
+            {
+                if (arrayList.Count > 0)
+                {
+                    if (logical.isOperator((string)arrayList[arrayList.Count - 1]))
+                    {
+                        arrayList.RemoveAt(arrayList.Count - 1);
+                    }
+                }
+            }
+
             string result = logical.Analysis(arrayList);  //引用dll文件计算方法
+
             if (result == "")  //计算出错
             {
                 if (logical.code == 1)          //除零错误
