@@ -31,6 +31,8 @@ namespace CalculatorMeApp.WPF
     /// </summary>
     public partial class Calculator_WindowWPF : Window
     {
+        public string HistoryInputs = string.Empty;
+        public string LastResult = string.Empty;
         public decimal TryGetResultOrDefault()
         {
             decimal resultt = decimal.Zero;
@@ -48,8 +50,13 @@ namespace CalculatorMeApp.WPF
 
         TextBox TempResult = null;  //保存result和input，用于模式切换
         TextBox TempInut = null;
-        public Calculator_WindowWPF()
+
+        //Me
+        readonly bool CloseOnEqual;
+        public Calculator_WindowWPF(bool CloseOnEqual = false)
         {
+            this.CloseOnEqual = CloseOnEqual;
+
             InitializeComponent();
             TempResult = this.Result;
             TempInut = this.Input;
@@ -373,9 +380,19 @@ namespace CalculatorMeApp.WPF
                 arrayList.Clear();
                 return;
             }
+            //Me
+            HistoryInputs = this.Result.Text + num;
+            LastResult = result;
+
             this.Result.Text = this.Result.Text + num + "=" + result;
             this.Input.Text = result;
             arrayList.Clear();
+
+            //Me
+            if(this.CloseOnEqual)
+            {
+                this.Close();
+            }
         }
 
         //转换模式
