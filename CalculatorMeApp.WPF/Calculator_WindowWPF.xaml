@@ -361,6 +361,7 @@
 
         <!--Controls-->
         <KeyBinding Command="{Binding Btn_Clean}" Key="Delete"/>
+        <KeyBinding Command="{Binding Btn_BackSpace}" Key="Backspace"/>
         <KeyBinding Command="{Binding Btn_Exit}" Key="Esc"/>
 
 

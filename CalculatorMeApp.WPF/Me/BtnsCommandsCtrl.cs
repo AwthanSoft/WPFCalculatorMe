@@ -32,6 +32,8 @@ namespace CalculatorMeApp.WPF.Me
 
         //Controls
         public ActionCommand Btn_Clean { set; get; }
+        public ActionCommand Btn_BackSpace { set; get; }
+
         public ActionCommand Btn_Exit { set; get; }
         
 

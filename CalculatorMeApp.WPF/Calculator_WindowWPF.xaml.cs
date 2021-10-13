@@ -94,13 +94,31 @@ namespace CalculatorMeApp.WPF
                 
                 //Controls
                 Btn_Clean = new ActionCommand(() => Clean_Button(this.Clean, null)),
+                Btn_BackSpace = new ActionCommand(() => OnBackSpace()),
+
                 Btn_Exit = new ActionCommand(() => Exit_Button(this.Exit, null)),
 
 
             };
             this.DataContext = ctrl;
         }
-
+        //Me
+        void OnBackSpace()
+        {
+            string num = this.Input.Text;
+            if(string.IsNullOrEmpty(num))
+            {
+                string resutFld = this.Result.Text;
+                if(!string.IsNullOrEmpty(resutFld))
+                {
+                    this.Result.Text = resutFld.Remove(resutFld.Length - 1, 1);
+                }
+            }
+            else
+            {
+                this.Input.Text = num.Remove(num.Length - 1, 1);
+            }
+        }
 
 
         //当选项卡发生变化时
